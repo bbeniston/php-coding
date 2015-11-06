@@ -1,2 +1,2 @@
 # php-coding
-Defining the PHP Coding Standards and Good Practices
+Defining the PHP Coding Standards and Good Practices.
