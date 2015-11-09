@@ -67,7 +67,8 @@ return false; //There is no need to have an else condition for "return false;" s
 //builtin hasing algorithm (uses bcrypt algorithm)
 $hashedPassword = password_hash('my super cool password', PASSWORD_DEFAULT);
 password_verify('the wrong password', $hashedPassword); // returns false
-password_verify('my super cool password', $hashedPassword); // returns true```
+password_verify('my super cool password', $hashedPassword); // returns true
+```
 
 
 * Only the folders to which the resources are stored (say, product image, user photo, etc.), should be given the full permission.
@@ -83,7 +84,8 @@ password_verify('my super cool password', $hashedPassword); // returns true```
 display_errors = Off
 display_startup_errors = Off
 error_reporting = E_ALL
-log_errors = On```
+log_errors = On
+```
 
 * All types of error display (even notices) needs to be fixed in the code (No suppressing of error/notice are allowed)
 
@@ -125,7 +127,8 @@ There two types of technical documentation which needs to be done:
      * @param <parameter-type> <parameter> <parameter-description>
      *
      * @return <return-type> <return-data-description>
-     */```
+     */
+     ```
   * The annotations should be generated into a HTML format using any of the following tools:
     1. [Doxygen](http://www.stack.nl/~dimitri/doxygen/index.html) `(Currently Used)`
     * [PhpDocumentor](http://www.phpdoc.org/)
