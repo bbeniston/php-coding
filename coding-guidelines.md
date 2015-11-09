@@ -38,23 +38,23 @@ For Web-services only (Micro Framework):
 
 * The code should be neatly formatted and the team works in a project should use the same Editor so that the formatting would be kept consistent throughout the project.
 >Recommended Editors are:
-  1. Netbeans `(Currently Used)`
-  * Eclipse
-  * PhpStorm
+  >1. Netbeans `(Currently Used)`
+  >* Eclipse
+  >* PhpStorm
 
-* Regarding the template pattern, the team can stick to the default template model followed by the framework. IF framework is not used, the developer may use a simple template which don't repeat the same HTML codes in different places.
+* Regarding the template pattern, the team can stick to the default template model followed by the framework. If a framework is not used, the developer may use a simple template which don't repeat the same HTML codes in different places.
 
-* There should not be any duplicate functions/classes/in-line codes used in a project. The reusable codes needs to be move to separate entity which could be invoked from different parts of the project.
+* There should not be any duplicate functions/classes/in-line codes used in a project. The reusable codes needs to be move to separate entity (say components) which could be invoked from different parts of the project.
 
-* The cron operations should not be made public. The cron file or function should not be accessible through the website link. It should be accessible only through the native PHP command line operation (CronTab, ssh access or shell script). `CronTab` needs to be used for scheduling the cron jobs.
+* The cron operations should not be made public. The cron file or function should not be made accessible through the website link. It should be accessible only through the native PHP command line operation (CronTab, ssh access or shell script). `CronTab` needs to be used for scheduling the cron jobs.
 
 * The data format to be shown in the interface should be in MM/DD/YYYY format.
 
 * Always define PHP block with `<?php`
 
-* When checking for boolean value or null, always us `===` in the if condition.
+* When checking for boolean value or null, always us `===` in the **if** condition.
 
-* Avoid using else whenever its not necessary
+* Avoid using **else** whenever its not necessary
 ```php
 if ($city == $v){
   return true;
@@ -65,9 +65,9 @@ return false; //There is no need to have an else condition for "return false;" s
 * The password stored in the database should be hashed.
 ```php
 //builtin hasing algorithm (uses bcrypt algorithm)
-$hashedPassword = password_hash('my super cool password', PASSWORD_DEFAULT);
-password_verify('the wrong password', $hashedPassword); // returns false
-password_verify('my super cool password', $hashedPassword); // returns true
+$hashedPassword = password_hash('my password', PASSWORD_DEFAULT);
+password_verify('wrong password', $hashedPassword); // returns false
+password_verify('my password', $hashedPassword); // returns true
 ```
 
 
@@ -117,7 +117,7 @@ return true;
 * Minify the css files and js files in production
 
 ## Code Documentation
-There two types of technical documentation which needs to be done:
+There are 3 types of technical documentations which needs to be done:
 * Code Annotations
   * The code annotations should be done in all the files, classes, methods and properties. Below is just a sample:
   ```php
@@ -144,21 +144,21 @@ There two types of technical documentation which needs to be done:
     * [Swagger](http://swagger.io/open-source-integrations/) is the tool which we are using to create the documentation and sandbox feature for the app developers in order for them to check and understand the web-services.
 
 ## Database
-The team should stick to any of the following:
-* **Default ORM/DBA** followed by the framework.
+The team should follow any of the following:
+* Default **ORM/DBA** used by the framework.
 
 * For the Framework-less Project:
   1. **PDO** (PHP Data Object)
-  * **Mysqli** (Object Oriented pattern is preffered)
+  * **Mysqli**
 
 
 * Stored Procedure should be used when multiple query operations are to be done in a single transaction which could decrease the traffic between the Apache and Mysql servers.
 
-* The default character set of the text fields/table should be utf8_general_ci
+* The default character set of the text fields/table should be utf8_general_ci.
 
-* Innodb should be the database storage engine
+* Innodb should be the database storage engine.
 
-* Make sure the DBA/ORM of you framework handles the SQL Injection wisely.
+* Make sure the DBA/ORM of the framework handles the SQL Injection wisely.
 
 ## Website Hosting
 The developer should make sure s/he understand what s/he is doing in the hosting server provided by the client.
@@ -175,7 +175,7 @@ If there are some tasks which would require more time to execute (say, uploading
 
 The developer must ensure the following from the client in the beginning of the project:
 * The web-services URL needs to be encrypted or not (https:)
-* Hosting Details and access
+* Hosting details and access
 * Suggestions from client on the Framework to be used (If the client is technical)
 * The type of design required (Normal, Responsive, Adaptive)
 * Number of interface language to be used (By default: English only)
@@ -185,6 +185,4 @@ The developer must ensure the following from the client in the beginning of the 
 * [PHP.net](http://php.net/)
 * [Swagger](http://swagger.io/)
 * [Composer](https://getcomposer.org/)
-
-
-https://github.com/bbeniston/php-coding/blob/master/coding-guidelines.md
+* [PHP Best Practices](https://phpbestpractices.org/)
