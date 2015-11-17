@@ -38,6 +38,7 @@ For Web-services only (Micro Framework):
 
 * The code should be neatly formatted and the team works in a project should use the same Editor so that the formatting would be kept consistent throughout the project.
 >Recommended Editors are:
+
   >1. Netbeans `(Currently Used)`
   >* Eclipse
   >* PhpStorm
@@ -169,7 +170,7 @@ Few Hosting Services that could be suggested to the clients are:
 * Hostgator
 * Godaddy
 
-Linux (Cenos or Ubuntu), Apache, Mysql and PHP combination is  much preferred. If client wishes, Apache could be replace by Nginx Web Server.
+Linux (Centos or Ubuntu), Apache, Mysql and PHP combination is  much preferred. If client wishes, Apache could be replace by Nginx Web Server.
 
 If there are some tasks which would require more time to execute (say, uploading a big video/image or calling an external api in a loop), then that particular piece of function needs to be invoked to run in the background.
 
