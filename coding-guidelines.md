@@ -6,16 +6,19 @@ This guide would act as a standard reference which could be followed by a develo
 ## PHP Version
 Being an Open-source Technology and a ever improving Platform, the team is advised to use the latest stable version which PHP Community recommends.
 
-Latest Versions as of Nov 9th, 2015 are listed below:
+Latest Versions as of May 30th, 2016 are listed below:
 
 | Technology    | Latest Version|
 | ------------- |:-------------|
-| PHP           | 5.6.15        |
-| MySql         | 5.7           |
-| Apache        | 2.4.17        |
+| PHP (new projects)| 7.0.x    |
+| PHP           | 5.6.x        |
+| MySql         | 5.7.x        |
+| Apache        | 2.4.x        |
+
+> Where x represents the latest version in that series
 
 ## PHP Frameworks/CMS
-Following are the (Full-Stack) frameworks currently being used in the teams:
+Following are the (Full-Stack) frameworks currently being used in the team:
 >The most popular in the PHP community is Laravel.
 
 * Laravel `Currently Used`
@@ -41,11 +44,12 @@ For Web-services only (Micro Framework):
 
   >1. Netbeans `(Currently Used)`
   >* Eclipse
-  >* PhpStorm
+  >* Notepad++
+  >* Sublime
 
 * Regarding the template pattern, the team can stick to the default template model followed by the framework. If a framework is not used, the developer may use a simple template which don't repeat the same HTML codes in different places.
 
-* There should not be any duplicate functions/classes/in-line codes used in a project. The reusable codes needs to be move to separate entity (say components) which could be invoked from different parts of the project.
+* There should not be any duplicate functions/classes/in-line codes used in a project. The reusable codes should be moved to separate entity (say components) which could be invoked from different parts of the project.
 
 * The cron operations should not be made public. The cron file or function should not be made accessible through the website link. It should be accessible only through the native PHP command line operation (CronTab, ssh access or shell script). `CronTab` needs to be used for scheduling the cron jobs.
 
@@ -161,8 +165,12 @@ The team should follow any of the following:
 
 * Make sure the DBA/ORM of the framework handles the SQL Injection wisely.
 
+* Index the fields according to your search conditions.
+
 ## Website Hosting
 The developer should make sure s/he understand what s/he is doing in the hosting server provided by the client.
+
+Initially the code/db could be deployed to the staging server in AWS. But as soon as you get the hosting details from the client, the code and db should be moved to client's hosting.
 
 Few Hosting Services that could be suggested to the clients are:
 * AWS `(Much preffered)`
@@ -180,6 +188,12 @@ The developer must ensure the following from the client in the beginning of the 
 * Suggestions from client on the Framework to be used (If the client is technical)
 * The type of design required (Normal, Responsive, Adaptive)
 * Number of interface language to be used (By default: English only)
+
+For the url which should be encrypted the following steps needs to be done:
+* Creation of Key file and CSR file in the hosting server
+* Purchase of SSL from the provider (this could be done by the client)
+* Providing CSR and Generating Certificate (*.crt) files from the SSL provider
+* Installation of Certificate files in the web server
 
 ## Reference:-
 * [PHP The Right Way](http://www.phptherightway.com/)
